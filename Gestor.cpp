@@ -94,44 +94,6 @@ int main() {
     }
 
 
-
-    //10 usuarios predefinidos==>solo cuando el archivo este vacio (cambiar dps)
-    if (numUsuarios == 0) {
-        Usuario usuariosPredef[10] = {
-            {1, "simonk", 45325127, "Simon", 1234, 10000},
-            {2, "blitok", 46732182, "Pablo", 4321, 10000},
-            {3, "gabit", 46728112, "Gabriel", 5432, 10000},
-            {4, "tomy04L", 46929022, "Tomas Lopez", 7586, 10000},
-            {5, "RicardoS", 38293027, "Ricardo", 4589, 10000},
-            {6, "ValenVT", 40329129, "Valentin", 8932, 10000},
-            {7, "LukitasLP", 46756435, "Lucas Fernandez", 7623, 10000},
-            {8, "Juanpi2024", 35657329, "Juan Pablo", 1829, 10000},
-            {9, "Ezekieel", 44533122, "Ezequiel", 2356, 10000},
-            {10, "Willyyy", 39546237, "William", 9573, 10000}
-        };
-     
-     arch_usuario = fopen(archivo, "ab");//abro el archivo para agregar los predefinidos
-     if (!arch_usuario){
-     	cout<<"No se pudo abrir el archivo para escritura."<<endl;
-     	return 1;
-	 }
-     
-     for (int i = 0; i<10;i++){
-     	fwrite (&usuariosPredef[i], sizeof(Usuario), 1, arch_usuario);
-	 }
-	 
-	 fclose(arch_usuario);
-	 
-	 //ahora cargo en el archivo los predef
-     for(int i = 0;i<10;i++){
-     	usuarios[i]=usuariosPredef[i];
-	 }
-     numUsuarios = 10; //actualizo el array numUsuarios
-     
-    }
-
-
-
     cout << "Bienvenido al apartado de carga de cliente." << endl;
     cout << endl;
     string cargar_cliente = "si";
