@@ -82,7 +82,7 @@ Usuario Registro_usuario(){
 
 
 int main() {
-    const char* archivo = "USUARIO.dat";
+    const char* archivo = "usuario.dat";
 
 	//leo el archivo
     FILE* arch_usuario = fopen(archivo, "rb");
